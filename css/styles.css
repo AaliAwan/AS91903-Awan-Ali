@@ -1,17 +1,17 @@
-/* Import Google Font for Appeal */
+/* Import Google Font  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Base/Global Styles */
+/* Base Styles */
 :root {
     --background-opacity: 0.7;
     --box-bg-color: rgba(0, 0, 50, var(--background-opacity));
     --primary-color: #002244; /* Dark Blue/Navy */
-    --secondary-color: #10acc8; /* Red (for CTAs/Highlights) */
+    --secondary-color: #10acc8; /* Cyan/Accent (for CTAs/Highlights) */
     --text-color: #ffffff;
     --transition-speed: 0.3s;
 }
 
-/* Basic reset (from user input, merged with global setup) */
+/* Basic reset  */
 body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
 body {
     background: url("../images/background.jpg") no-repeat center center fixed;
@@ -81,7 +81,7 @@ nav a.active:hover {
     border: 2px solid var(--secondary-color);
 }
 .cta-link:hover {
-    background: rgba(200, 16, 46, 0.9); /* Darken red on hover */
+    background: rgba(16, 172, 200, 0.9); /* Darken hover */
     border-color: var(--text-color);
 }
 
@@ -140,7 +140,7 @@ nav a.active:hover {
     border-color: var(--secondary-color);
 }
 
-/* General Content Styling (Services, Join Us, Gallery) */
+/* General Content Styling (Menu, Ordering) */
 .page-content {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 0;
@@ -164,62 +164,62 @@ nav a.active:hover {
     padding: 10px;
 }
 
-/* Service Page - Chalet Grid (Merit: CSS Grid) */
-.chalet-grid {
+/* Menu Page - Ice Cream Grid (Merit: CSS Grid) */
+.menu-grid {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 30px;
 }
-.chalet-card {
+.menu-card {
     background: var(--box-bg-color);
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-.chalet-card:hover {
+.menu-card:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
-.chalet-image {
+.menu-image {
     display: block;
     height: 200px;
     object-fit: cover;
     width: 100%;
 }
-.chalet-details {
+.menu-details {
     padding: 20px;
 }
-.chalet-details h2 {
+.menu-details h2 {
     color: var(--secondary-color);
     margin-bottom: 10px;
 }
-.capacity-list {
+.flavor-list {
     font-size: 0.95em;
     list-style: none;
     margin-bottom: 15px;
     padding: 0;
 }
-.capacity-list li {
+.flavor-list li {
     margin-bottom: 5px;
 }
-.features-box h3 {
+.ingredients-box h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 10px;
     padding-bottom: 5px;
 }
-.features-box ul {
+.ingredients-box ul {
     list-style-type: disc;
     margin-left: 20px;
     padding-left: 0;
 }
 
-/* Join Us Page Styling */
-.membership-steps {
+/* Ordering Page Styling */
+.order-steps {
     margin-bottom: 40px;
 }
-.membership-steps h2 {
+.order-steps h2 {
     margin-bottom: 40px; /* Pushes the grid away from the H2 title */
 }
 .steps-grid {
@@ -254,13 +254,13 @@ nav a.active:hover {
     margin-bottom: 15px;
     margin-top: 5px;
 }
-.required-docs {
+.order-info {
     list-style-type: none;
     margin-top: 10px;
     padding: 0;
     text-align: left;
 }
-.required-docs li::before {
+.order-info li::before {
     content: "•";
     color: var(--secondary-color);
     display: inline-block;
@@ -268,7 +268,7 @@ nav a.active:hover {
     margin-left: -1em;
     width: 1em;
 }
-.email-link {
+.contact-link {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     color: var(--secondary-color);
@@ -277,18 +277,18 @@ nav a.active:hover {
     padding: 5px 10px;
     text-decoration: none;
 }
-.email-link:hover {
+.contact-link:hover {
     background: var(--secondary-color);
     color: var(--text-color);
 }
-.security-note {
-    background: rgba(200, 16, 46, 0.2);
+.privacy-note {
+    background: rgba(16, 172, 200, 0.2);
     border-radius: 8px;
     margin-top: 30px;
     padding: 15px;
 }
 
-/* Gallery Page Styling (CSS Grid) */
+/* Gallery/Menu Items Display (CSS Grid) */
 .photo-grid {
     display: grid;
     gap: 15px;
