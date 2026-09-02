@@ -1,0 +1,331 @@
+/* Import Google Font for Appeal */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Base/Global Styles */
+:root {
+    --background-opacity: 0.7;
+    --box-bg-color: rgba(0, 0, 50, var(--background-opacity));
+    --primary-color: #002244; /* Dark Blue/Navy */
+    --secondary-color: #10acc8; /* Red (for CTAs/Highlights) */
+    --text-color: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* Basic reset (from user input, merged with global setup) */
+body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    font-family: 'Montserrat', Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Page Wrapper and Main Content */
+.content-wrapper {
+    min-height: calc(100vh - 120px); /* Adjust min height to fill screen */
+    padding-bottom: 50px; /* Space for fixed footer */
+    padding-top: 70px; /* Space for fixed header on non-home pages */
+}
+
+/* Home Page Specific */
+.home-page {
+    padding-top: 0;
+}
+
+/* Header (Fixed Navigation) */
+header {
+    align-items: center;
+    background: var(--box-bg-color); /* Partial transparency */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 10px 30px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: background var(--transition-speed);
+    z-index: 1000;
+}
+/* Header scroll effect */
+header.scrolled {
+    background: rgba(0, 0, 50, 0.9);
+}
+
+.logo { height: 50px; }
+nav a {
+    border-radius: 5px;
+    color: var(--text-color);
+    margin-left: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+/* Link State Styling (Merit) */
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15); /* Subtle hover background */
+    color: var(--secondary-color);
+}
+nav a.active {
+    background: var(--secondary-color);
+    font-weight: bold;
+}
+nav a.active:hover {
+    color: var(--text-color);
+}
+.cta-link {
+    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+.cta-link:hover {
+    background: rgba(200, 16, 46, 0.9); /* Darken red on hover */
+    border-color: var(--text-color);
+}
+
+
+/* Hero section (Home Page) */
+.hero {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.hero-box {
+    background: var(--box-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 80%;
+    padding: 40px;
+}
+.hero-box h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero-box h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.buttons a {
+    border: 2px solid var(--text-color);
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    margin: 10px;
+    padding: 12px 25px;
+    text-decoration: none;
+    transition: all var(--transition-speed);
+}
+
+.primary-button {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.primary-button:hover {
+    background: var(--text-color);
+    border-color: var(--text-color);
+    box-shadow: 0 0 15px var(--secondary-color);
+    color: var(--primary-color);
+}
+.secondary-button {
+    background: rgba(255,255,255,0.1);
+}
+.secondary-button:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* General Content Styling (Services, Join Us, Gallery) */
+.page-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    padding: 80px 5% 40px 5%; /* Increased top padding for space below fixed header */
+}
+.page-intro {
+    background: var(--box-bg-color);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.page-content h1 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.highlight-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+/* Service Page - Chalet Grid (Merit: CSS Grid) */
+.chalet-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 30px;
+}
+.chalet-card {
+    background: var(--box-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.chalet-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+.chalet-image {
+    display: block;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.chalet-details {
+    padding: 20px;
+}
+.chalet-details h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+.capacity-list {
+    font-size: 0.95em;
+    list-style: none;
+    margin-bottom: 15px;
+    padding: 0;
+}
+.capacity-list li {
+    margin-bottom: 5px;
+}
+.features-box h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.features-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* Join Us Page Styling */
+.membership-steps {
+    margin-bottom: 40px;
+}
+.membership-steps h2 {
+    margin-bottom: 40px; /* Pushes the grid away from the H2 title */
+}
+.steps-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.step-card {
+    background: var(--box-bg-color);
+    border-radius: 10px;
+    border-top: 5px solid var(--secondary-color);
+    padding: 25px;
+    padding-top: 40px; /* Increased top padding to visually separate content from H2 above */
+    position: relative;
+    text-align: center;
+}
+.step-number {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 30px;
+    left: 50%;
+    line-height: 30px;
+    position: absolute;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 30px;
+}
+.step-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.required-docs {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+    text-align: left;
+}
+.required-docs li::before {
+    content: "•";
+    color: var(--secondary-color);
+    display: inline-block;
+    font-weight: bold;
+    margin-left: -1em;
+    width: 1em;
+}
+.email-link {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.email-link:hover {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+.security-note {
+    background: rgba(200, 16, 46, 0.2);
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+/* Gallery Page Styling (CSS Grid) */
+.photo-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.gallery-item {
+    background: var(--box-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+.gallery-image {
+    display: block;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+figcaption {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Footer (Fixed) */
+footer {
+    background: var(--box-bg-color);
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+}

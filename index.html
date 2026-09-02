@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- This section links the index page to the style and also the normalize.css -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scoops - Fresh Artisan Ice Cream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Updated file paths pointing inside the css folder -->
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<!-- This section gives the index page a header, a logo, and links to the 3 main website pages -->
+    <header>
+        <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="ordering.html" class="nav-link cta-link"><strong>Order Now</strong></a>
+        </nav>
+    </header>
+
+    <!-- This section contains the hero content and main buttons for Scoops -->
+    <main class="content-wrapper home-page">
+        <section class="hero">
+            <div class="hero-box">
+                <h1>Taste the Happiness at Scoops!</h1>
+                <h2>Handcrafted artisan ice cream made daily with fresh, local ingredients.</h2>
+                <div class="buttons">
+                    <a href="menu.html" class="button primary-button">Explore Flavors</a>
+                    <a href="ordering.html" class="button secondary-button">Place an Order</a>
+                </div>
+            </div>
+        </section>
+    </main>
     
+    <!-- This is the footer with copyright information for Scoops -->
+    <footer>
+        <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
+    </footer>
+
+    <!-- This section uses jQuery to make the header sticky/interactive on scroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('header').addClass('scrolled');
+            } else {
+                $('header').removeClass('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
