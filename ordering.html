@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Links to styles, normalise.css, and Google Fonts for Scoops Ice Cream -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoops - Online Booking & Ordering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header with fixed navigation and brand logo -->
+    <header>
+        <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="ordering.html" class="nav-link active cta-link"><strong>Order Now</strong></a>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="content-wrapper page-content booking-page">
+        <section class="page-intro">
+            <h1>Scoops Table Booking & Order Pick-Up</h1>
+            <p>Reserve a table for your party or pre-order handcrafted ice cream tubs for fast in-store pickup.</p>
+        </section>
+
+        <!-- Interactive Booking Form Container -->
+        <section class="form-container">
+            <form action="process_booking.php" method="POST" id="bookingForm" class="booking-form">
+                
+                <!-- Section 1: Customer Details -->
+                <fieldset class="form-section">
+                    <legend>1. Customer Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="e.g. Jane Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="e.g. jane@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="021 123 4567">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Section 2: Booking Type & Logistics -->
+                <fieldset class="form-section">
+                    <legend>2. Reservation Details</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="bookingType">Service Type *</label>
+                            <select id="bookingType" name="bookingType" required>
+                                <option value="">-- Select Type --</option>
+                                <option value="table">Table Reservation (Dine-in)</option>
+                                <option value="pickup">Express Pickup (Takeaway)</option>
+                                <option value="party">Party / Event Booking</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingDate">Date *</label>
+                            <input type="date" id="bookingDate" name="bookingDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingTime">Time Slot *</label>
+                            <input type="time" id="bookingTime" name="bookingTime" min="10:00" max="21:00" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Section 3: Pre-Order Selection -->
+                <fieldset class="form-section">
+                    <legend>3. Pre-Order Tubs (Optional)</legend>
+                    <div class="preorder-grid">
+                        <div class="preorder-item">
+                            <label for="vanillaQty">Vanilla Bean ($12.00/500ml)</label>
+                            <input type="number" id="vanillaQty" name="vanillaQty" min="0" max="10" value="0">
+                        </div>
+
+                        <div class="preorder-item">
+                            <label for="chocolateQty">Chocolate Fudge ($14.00/500ml)</label>
+                            <input type="number" id="chocolateQty" name="chocolateQty" min="0" max="10" value="0">
+                        </div>
+
+                        <div class="preorder-item">
+                            <label for="caramelQty">Salted Caramel ($14.00/500ml)</label>
+                            <input type="number" id="caramelQty" name="caramelQty" min="0" max="10" value="0">
+                        </div>
+
+                        <div class="preorder-item">
+                            <label for="mangoQty">Mango Sorbet - Vegan ($13.00/500ml)</label>
+                            <input type="number" id="mangoQty" name="mangoQty" min="0" max="10" value="0">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Section 4: Special Instructions & Terms -->
+                <fieldset class="form-section">
+                    <legend>4. Special Requirements</legend>
+                    <div class="form-group full-width">
+                        <label for="notes">Dietary Restrictions or Party Requests</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Let us know if you have allergies or need a high chair..."></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the cancellation policy and terms of service. *</label>
+                    </div>
+                </fieldset>
+
+                <!-- Submit Action -->
+                <div class="form-actions">
+                    <button type="submit" class="primary-button submit-btn">Confirm Reservation</button>
+                    <button type="reset" class="secondary-button reset-btn">Reset Form</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
