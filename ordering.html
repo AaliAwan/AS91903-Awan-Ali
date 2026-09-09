@@ -11,12 +11,14 @@
 <body>
     <!-- Fixed Navigation Header -->
     <header>
-        <img src="images/logo.png" alt="Scoops Logo" class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Scoops Logo" class="logo">
+        </a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="ordering.html" class="active cta-link">Order Now</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="ordering.html" class="nav-link active cta-link"><strong>Order Now</strong></a>
         </nav>
     </header>
 
@@ -27,7 +29,7 @@
             <p>Order your favorite ice cream tubs and desserts or reserve a parlour seat ahead of time.</p>
         </section>
 
-        <!-- UX Process Guide (Level 3 Usability Convention) -->
+        <!-- UX Process Guide -->
         <section class="order-steps">
             <h2>3 Easy Steps to Scoop</h2>
             <div class="steps-grid">
@@ -52,7 +54,19 @@
         <!-- Form Wrapper Container -->
         <section class="form-container">
             <h2>Scoops Order Request Sheet</h2>
-            <p style="margin-bottom: 25px;">Complete the live Google Form preview below to send your request directly to our dispatch kitchen.</p
+            <p style="margin-bottom: 25px;">Complete the live Google Form below to send your request directly to our kitchen.</p>
+            
+            <!-- Replace the src URL below with your live published Google Form embed link -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORM_ID/viewform?embedded=true" 
+                width="100%" 
+                height="800" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Loading order form…</iframe>
+        </section>
+    </main>
+
     <!-- Fixed Footer -->
     <footer>
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>

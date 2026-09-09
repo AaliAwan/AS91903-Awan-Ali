@@ -1,18 +1,25 @@
-/* Import Google Font  */
+/* Imports the Montserrat font style from Google Fonts for uniform text design across the site. */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Base Styles */
+/* Sets up shared color and theme values so changing a color here updates the whole site easily. */
 :root {
     --background-opacity: 0.7;
     --box-bg-color: rgba(0, 0, 50, var(--background-opacity));
-    --primary-color: #002244; /* Dark Blue/Navy */
-    --secondary-color: #10acc8; /* Cyan/Accent (for CTAs/Highlights) */
+    --primary-color: #002244;
+    --secondary-color: #10acc8;
     --text-color: #ffffff;
     --transition-speed: 0.3s;
+    --input-bg-color: rgba(255, 255, 255, 0.1);
+    --input-border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Basic reset  */
-body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
+/* Clears out browser default padding and margins so the layout stays consistent on all devices. */
+body, h1, h2, h3, p, ul, fieldset { 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Controls the fixed background picture, overall page font, and centers text by default. */
 body {
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -22,22 +29,91 @@ body {
     text-align: center;
 }
 
-/* Page Wrapper and Main Content */
-.content-wrapper {
-    min-height: calc(100vh - 120px); /* Adjust min height to fill screen */
-    padding-bottom: 50px; /* Space for fixed footer */
-    padding-top: 70px; /* Space for fixed header on non-home pages */
+/* Centers the main content area on the about page and caps its maximum width. */
+.about-container {
+    margin: 0 auto;
+    max-width: 900px;
 }
 
-/* Home Page Specific */
+/* Builds a semi-transparent box for the story section with soft borders and padding. */
+.story-box {
+    background: var(--box-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Applies the main accent color to the secondary headings inside the story block. */
+.story-box h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Adds line height space to paragraph text inside the story block for better reading ease. */
+.story-box p {
+    line-height: 1.6;
+}
+
+/* Creates a responsive grid layout that lines up feature cards into neat columns. */
+.about-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 35px;
+}
+
+/* Styles individual feature cards with an accented top border and rounded edges. */
+.about-card {
+    background: var(--box-bg-color);
+    border-radius: 10px;
+    border-top: 4px solid var(--secondary-color);
+    padding: 25px;
+    text-align: center;
+}
+
+/* Sets heading colors inside each feature card to match the site's accent theme. */
+.about-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Adjusts font sizing and line height for text inside feature blocks to keep it clean. */
+.about-card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Creates a highlighted card area at the bottom of the page to encourage user clicks. */
+.about-cta {
+    background: var(--box-bg-color);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Sets spacing below the call-to-action title so it sits properly above the button. */
+.about-cta h3 {
+    margin-bottom: 15px;
+}
+
+/* Ensures the main content container expands to cover the screen height between header and footer. */
+.content-wrapper {
+    min-height: calc(100vh - 120px);
+    padding-bottom: 50px;
+    padding-top: 70px;
+}
+
+/* Removes top padding specifically on the home page hero screen so it sits flush at top. */
 .home-page {
     padding-top: 0;
 }
 
-/* Header (Fixed Navigation) */
+/* Fixes the top menu bar in place with dark transparency and aligns items horizontally. */
 header {
     align-items: center;
-    background: var(--box-bg-color); /* Partial transparency */
+    background: var(--box-bg-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
@@ -49,12 +125,18 @@ header {
     transition: background var(--transition-speed);
     z-index: 1000;
 }
-/* Header scroll effect */
+
+/* Darkens the header navigation background when the user scrolls down the page. */
 header.scrolled {
     background: rgba(0, 0, 50, 0.9);
 }
 
-.logo { height: 50px; }
+/* Keeps the logo image at a set height so the navigation bar stays slim. */
+.logo { 
+    height: 50px; 
+}
+
+/* Styles navigation links with spacing, rounded corners, and smooth color changes. */
 nav a {
     border-radius: 5px;
     color: var(--text-color);
@@ -64,35 +146,44 @@ nav a {
     transition: background var(--transition-speed), color var(--transition-speed);
 }
 
-/* Link State Styling (Merit) */
+/* Lightens navigation link backgrounds when hovered over to provide visual feedback. */
 nav a:hover {
-    background: rgba(255, 255, 255, 0.15); /* Subtle hover background */
+    background: rgba(255, 255, 255, 0.15);
     color: var(--secondary-color);
 }
+
+/* Highlights the currently selected menu page link with a solid background color. */
 nav a.active {
     background: var(--secondary-color);
     font-weight: bold;
 }
+
+/* Keeps text bright white when hovering over an active menu page button. */
 nav a.active:hover {
     color: var(--text-color);
 }
+
+/* Formats the primary ordering link in the header as a distinct button. */
 .cta-link {
     background: var(--secondary-color);
     border: 2px solid var(--secondary-color);
 }
+
+/* Darkens the main ordering header button slightly when hovered over by a user. */
 .cta-link:hover {
-    background: rgba(16, 172, 200, 0.9); /* Darken hover */
+    background: rgba(16, 172, 200, 0.9);
     border-color: var(--text-color);
 }
 
-
-/* Hero section (Home Page) */
+/* Centers the hero banner content fully on the home page screen using flexbox. */
 .hero {
     align-items: center;
     display: flex;
     height: 100vh;
     justify-content: center;
 }
+
+/* Formats the central transparent card containing main welcome messaging on home page. */
 .hero-box {
     background: var(--box-bg-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -100,21 +191,28 @@ nav a.active:hover {
     max-width: 80%;
     padding: 40px;
 }
+
+/* Sets large title styling for the hero banner heading text. */
 .hero-box h1 {
     font-size: 3em;
     margin-bottom: 10px;
 }
+
+/* Styles subtitle text inside the home page hero content box. */
 .hero-box h2 {
     font-size: 1.2em;
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-.buttons a {
+/* Applies pill-shaped rounded button styling for site actions and form buttons. */
+.buttons a, .form-actions button {
     border: 2px solid var(--text-color);
     border-radius: 25px;
     color: white;
+    cursor: pointer;
     display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     margin: 10px;
     padding: 12px 25px;
@@ -122,40 +220,53 @@ nav a.active:hover {
     transition: all var(--transition-speed);
 }
 
+/* Styles the main action button with the cyan theme color. */
 .primary-button {
     background: var(--secondary-color);
     border-color: var(--secondary-color);
 }
+
+/* Adds a bright glow effect when hovering over main action buttons. */
 .primary-button:hover {
     background: var(--text-color);
     border-color: var(--text-color);
     box-shadow: 0 0 15px var(--secondary-color);
     color: var(--primary-color);
 }
+
+/* Sets up semi-transparent background styling for alternative site buttons. */
 .secondary-button {
     background: rgba(255,255,255,0.1);
 }
+
+/* Turns secondary button background into cyan when hovered over by the cursor. */
 .secondary-button:hover {
     background: var(--secondary-color);
     border-color: var(--secondary-color);
 }
 
-/* General Content Styling (Menu, Ordering) */
+/* Creates a dark overlay block for general internal page content wrappers. */
 .page-content {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 0;
-    padding: 80px 5% 40px 5%; /* Increased top padding for space below fixed header */
+    padding: 80px 5% 40px 5%;
 }
+
+/* Adds top intro card styling for page titles and headers. */
 .page-intro {
     background: var(--box-bg-color);
     border-radius: 10px;
     margin-bottom: 30px;
     padding: 20px;
 }
+
+/* Color codes primary section headings on subpages to match the theme color. */
 .page-content h1 {
     color: var(--secondary-color);
     margin-bottom: 15px;
 }
+
+/* Highlights key callout banners with a clear rounded text bar. */
 .highlight-bar {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -164,78 +275,235 @@ nav a.active:hover {
     padding: 10px;
 }
 
-/* Menu Page - Ice Cream Grid (Merit: CSS Grid) */
+/* Arranges ice cream items into responsive CSS grid columns on menu pages. */
 .menu-grid {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 30px;
 }
+
+/* Styles individual flavor cards on the menu screen with soft edges. */
 .menu-card {
     background: var(--box-bg-color);
     border-radius: 10px;
+    cursor: pointer;
     overflow: hidden;
+    position: relative;
     text-align: left;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
+/* Lifts menu cards slightly upwards when hovered over by the mouse. */
 .menu-card:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
+
+/* Ensures menu product images crop cleanly without stretching out of proportion. */
 .menu-image {
     display: block;
     height: 200px;
     object-fit: cover;
     width: 100%;
 }
+
+/* Adds internal padding inside menu cards around flavor descriptions. */
 .menu-details {
     padding: 20px;
 }
+
+/* Applies theme colors to individual item titles within menu cards. */
 .menu-details h2 {
     color: var(--secondary-color);
     margin-bottom: 10px;
 }
+
+/* Styles price labels inside flavor cards with bold cyan text. */
+.price-tag {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Formats tiny detail trigger buttons at the bottom of menu items. */
+.view-details-btn {
+    background: rgba(16, 172, 200, 0.2);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 0.85em;
+    margin-top: 10px;
+    padding: 5px 12px;
+    transition: background var(--transition-speed);
+}
+
+/* Fills details button background color when hovering over the parent menu card. */
+.menu-card:hover .view-details-btn {
+    background: var(--secondary-color);
+}
+
+/* Removes default list styling from flavor list elements for cleaner layout. */
 .flavor-list {
     font-size: 0.95em;
     list-style: none;
     margin-bottom: 15px;
     padding: 0;
 }
+
+/* Adds vertical space between individual items in flavor detail lists. */
 .flavor-list li {
     margin-bottom: 5px;
 }
+
+/* Adds a simple bottom border line under the ingredients section heading. */
 .ingredients-box h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 10px;
     padding-bottom: 5px;
 }
+
+/* Indents bulleted lists inside the menu ingredient details container. */
 .ingredients-box ul {
     list-style-type: disc;
     margin-left: 20px;
     padding-left: 0;
 }
 
-/* Ordering Page Styling */
+/* Covers the full viewport with a dark screen overlay for popup modals. */
+.modal-overlay {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity var(--transition-speed) ease;
+    width: 100vw;
+    z-index: 2000;
+}
+
+/* Displays popup modal screen fully when given active status class. */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Formats popup window container with scrollable overflow and accent borders. */
+.modal-content {
+    background: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(16, 172, 200, 0.4);
+    max-height: 85vh;
+    max-width: 550px;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    text-align: left;
+    width: 90%;
+}
+
+/* Positions the modal exit icon neatly in the top right corner. */
+.close-btn {
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    transition: color var(--transition-speed);
+}
+
+/* Changes modal exit button color on hover so users know it is clickable. */
+.close-btn:hover {
+    color: var(--secondary-color);
+}
+
+/* Shapes preview image sizing inside active popups to fit header area. */
+.modal-image {
+    border-radius: 10px;
+    height: 200px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Formats price callouts inside popup detail windows using accent colors. */
+.modal-price {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Sets sentence line spacing for paragraph descriptions inside popup windows. */
+.modal-description {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Creates a shaded box inside modal popup to present ingredient lists clearly. */
+.modal-ingredients {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Underlines subheadings inside modal ingredient lists with clean border lines. */
+.modal-ingredients h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* Adds bullet point spacing inside modal ingredient detailed lists. */
+.modal-ingredients ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Sets line spacing between items in modal window detailed lists. */
+.modal-ingredients li {
+    margin-bottom: 5px;
+}
+
+/* Sets bottom margin spacing for instruction steps on the order page. */
 .order-steps {
     margin-bottom: 40px;
 }
+
+/* Sets margin gap under ordering step title heading to separate content. */
 .order-steps h2 {
-    margin-bottom: 40px; /* Pushes the grid away from the H2 title */
+    margin-bottom: 40px;
 }
+
+/* Displays ordering instruction steps side by side using CSS grid. */
 .steps-grid {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+/* Builds card containers for each step with top accent borders. */
 .step-card {
     background: var(--box-bg-color);
     border-radius: 10px;
     border-top: 5px solid var(--secondary-color);
     padding: 25px;
-    padding-top: 40px; /* Increased top padding to visually separate content from H2 above */
+    padding-top: 40px;
     position: relative;
     text-align: center;
 }
+
+/* Styles floating numbered badge circles anchored over top of step cards. */
 .step-number {
     background: var(--secondary-color);
     border-radius: 50%;
@@ -249,17 +517,23 @@ nav a.active:hover {
     transform: translateX(-50%);
     width: 30px;
 }
+
+/* Colors titles inside ordering step cards to highlight key instructions. */
 .step-card h3 {
     color: var(--secondary-color);
     margin-bottom: 15px;
     margin-top: 5px;
 }
+
+/* Clears list formatting for information items shown on ordering section. */
 .order-info {
     list-style-type: none;
     margin-top: 10px;
     padding: 0;
     text-align: left;
 }
+
+/* Inserts custom bullet characters before bullet points in step info lists. */
 .order-info li::before {
     content: "•";
     color: var(--secondary-color);
@@ -268,6 +542,8 @@ nav a.active:hover {
     margin-left: -1em;
     width: 1em;
 }
+
+/* Formats direct contact text links as subtle highlighted clickable tags. */
 .contact-link {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -277,10 +553,14 @@ nav a.active:hover {
     padding: 5px 10px;
     text-decoration: none;
 }
+
+/* Highlights contact text link buttons when hovered over by users. */
 .contact-link:hover {
     background: var(--secondary-color);
     color: var(--text-color);
 }
+
+/* Creates a highlighted banner section for privacy notes on forms. */
 .privacy-note {
     background: rgba(16, 172, 200, 0.2);
     border-radius: 8px;
@@ -288,12 +568,14 @@ nav a.active:hover {
     padding: 15px;
 }
 
-/* Gallery/Menu Items Display (CSS Grid) */
+/* Sets responsive CSS grid columns for photo gallery product displays. */
 .photo-grid {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+/* Styles cards holding photo gallery images with hover animation effects. */
 .gallery-item {
     background: var(--box-bg-color);
     border-radius: 8px;
@@ -302,15 +584,21 @@ nav a.active:hover {
     overflow: hidden;
     transition: transform 0.4s ease;
 }
+
+/* Scales up gallery item cards slightly when hovered over by cursor. */
 .gallery-item:hover {
     transform: scale(1.03);
 }
+
+/* Fits gallery product images neatly while maintaining proper aspect ratios. */
 .gallery-image {
     display: block;
     height: 250px;
     object-fit: cover;
     width: 100%;
 }
+
+/* Formats text captions placed underneath photos inside the product gallery. */
 figcaption {
     background: rgba(0, 0, 0, 0.5);
     font-size: 0.9em;
@@ -318,7 +606,150 @@ figcaption {
     padding: 10px;
 }
 
-/* Footer (Fixed) */
+/* Builds main form container boxes with dark transparent backgrounds. */
+.form-container {
+    background: var(--box-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin: 0 auto 30px auto;
+    max-width: 850px;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Adds bordered groupings around related form controls for clear structure. */
+.form-section {
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+/* Colors section legend headers inside form fieldsets for clarity. */
+.form-section legend {
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Arranges input fields into responsive side-by-side columns. */
+.form-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Fits pre-order item selections into structured responsive grid blocks. */
+.preorder-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Aligns input fields vertically underneath their corresponding field labels. */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allows specific form elements to stretch across full row width. */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Styles label typography above form fields to ensure high legibility. */
+.form-group label, .preorder-item label {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Formats form text boxes, selects, and textareas with matching borders. */
+.form-group input, 
+.form-group select, 
+.form-group textarea,
+.preorder-item input {
+    background: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 10px;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Colors dropdown options inside form selects to match dark site theme. */
+.form-group select option {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Adds glowing cyan outline borders when clicking into form fields. */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus,
+.preorder-item input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px var(--secondary-color);
+    outline: none;
+}
+
+/* Creates shaded sub-card blocks for individual preorder item entries. */
+.preorder-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Aligns checkbox inputs horizontally next to their descriptive text labels. */
+.form-checkbox {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Centers submit action buttons horizontally at bottom of forms. */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Stacks navigation elements vertically on mobile screens under 768px wide. */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    nav {
+        margin-top: 10px;
+    }
+    
+    nav a {
+        font-size: 0.85em;
+        margin: 0 5px;
+        padding: 4px 8px;
+    }
+
+    .content-wrapper {
+        padding-top: 120px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .hero-box h1 {
+        font-size: 2em;
+    }
+}
+
+/* Fixes the copyright footer bar along the very bottom of the window. */
 footer {
     background: var(--box-bg-color);
     bottom: 0;
