@@ -2,176 +2,145 @@
 <html lang="en">
 <!-- Links to stylesheet and normalize.css -->
 <head>
-<!-- Sets character encoding for proper text rendering -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoops - Menu</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!-- Loads global CSS styles for menu items -->
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<!-- Fixed header navigation section -->
-    <!-- Navigation Header -->
+    <!-- Fixed header navigation section -->
     <header>
         <a href="index.html">
             <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
-<!-- Menu link navigation items -->
         </a>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="menu.html" class="nav-link active">Menu</a>
             <a href="about.html" class="nav-link">About Us</a>
-<!-- Prominent order button in navbar -->
             <a href="ordering.html" class="nav-link cta-link"><strong>Order Now</strong></a>
         </nav>
     </header>
 
-<!-- Main menu wrapper section -->
     <!-- Menu Content Wrapper -->
     <main class="content-wrapper page-content menu-page">
         <section class="page-intro">
             <h1>Scoops Ice Cream Menu</h1>
             <p>Explore our delicious range of handcrafted artisan flavors made fresh daily with local ingredients. Click on any item for full ingredients and flavor details!</p>
-<!-- Intro text explaining interactive menu feature -->
         </section>
 
         <!-- Ice Cream Interactive Grid -->
         <section class="menu-grid">
             
-<!-- Menu Card 1: Classic Vanilla Bean -->
             <article class="menu-card" 
                      data-title="Classic Vanilla Bean" 
                      data-price="$4.50" 
                      data-img="images/vanilla_bean.jpg"
                      data-description="Made with real Madagascan vanilla pods and fresh organic cream. A timeless, rich classic."
-<!-- Data attributes passed into JS modal -->
                      data-ingredients="Fresh Cream, Organic Milk, Cane Sugar, Egg Yolks, Pure Vanilla Bean Paste.">
                 <img src="images/vanilla_bean.jpg" alt="Classic Vanilla Bean Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Classic Vanilla Bean</h2>
                     <p class="price-tag">$4.50</p>
-<!-- Button indicating item is clickable -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 2: Rich Chocolate Fudge -->
             <article class="menu-card" 
                      data-title="Rich Chocolate Fudge" 
                      data-price="$5.00" 
                      data-img="images/chocolate_fudge.jpg"
                      data-description="Deep Belgian dark chocolate ice cream swirled with homemade gooey chocolate fudge sauce."
-<!-- Product details used when card is clicked -->
                      data-ingredients="Whole Milk, Cocoa Butter, Dark Belgian Chocolate, Fudge Swirl, Sugar, Cream.">
                 <img src="images/chocolate_fudge.jpg" alt="Rich Chocolate Fudge Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Rich Chocolate Fudge</h2>
                     <p class="price-tag">$5.00</p>
-<!-- Button element triggering detail modal -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 3: Fresh Strawberry -->
             <article class="menu-card" 
                      data-title="Fresh Strawberry" 
                      data-price="$4.50" 
                      data-img="images/fresh_strawberry.jpg"
                      data-description="Churned with real, locally harvested strawberries for a bright, fruity, and refreshing scoop."
-<!-- Ingredients info for allergy popup -->
                      data-ingredients="Local Strawberries, Fresh Cream, Condensed Milk, Sugar, Lemon Juice.">
                 <img src="images/fresh_strawberry.jpg" alt="Fresh Strawberry Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Fresh Strawberry</h2>
                     <p class="price-tag">$4.50</p>
-<!-- Visible button inside product card -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 4: Mint Chocolate Chip -->
             <article class="menu-card" 
                      data-title="Mint Chocolate Chip" 
                      data-price="$5.00" 
                      data-img="images/mint_chip.jpg"
                      data-description="Cool peppermint ice cream packed with crunchy dark chocolate flakes."
-<!-- Flavor data attributes for modal script -->
                      data-ingredients="Natural Peppermint Extract, Dark Chocolate Chunks, Fresh Cream, Milk, Sugar.">
                 <img src="images/mint_chip.jpg" alt="Mint Chocolate Chip Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Mint Chocolate Chip</h2>
                     <p class="price-tag">$5.00</p>
-<!-- Visual detail prompt button -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 5: Cookies & Cream -->
             <article class="menu-card" 
                      data-title="Cookies & Cream" 
                      data-price="$5.20" 
                      data-img="images/cookies_cream.jpg"
                      data-description="Smooth sweet cream base loaded with crushed chocolate sandwich cookie chunks."
-<!-- Ingredients list string for Cookies & Cream -->
                      data-ingredients="Chocolate Sandwich Cookies, Fresh Cream, Whole Milk, Sugar, Natural Vanilla.">
                 <img src="images/cookies_cream.jpg" alt="Cookies & Cream Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Cookies & Cream</h2>
                     <p class="price-tag">$5.20</p>
-<!-- Interactive button marker -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 6: Salted Caramel Swirl -->
             <article class="menu-card" 
                      data-title="Salted Caramel Swirl" 
                      data-price="$5.20" 
                      data-img="images/salted_caramel.jpg"
                      data-description="Rich butter caramel infused with sea salt, folded through a creamy base."
-<!-- Salted Caramel data parameters -->
                      data-ingredients="Sea Salt, Brown Sugar, Butter, Heavy Cream, Milk, Vanilla Extract.">
                 <img src="images/salted_caramel.jpg" alt="Salted Caramel Swirl Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Salted Caramel Swirl</h2>
                     <p class="price-tag">$5.20</p>
-<!-- Details click trigger button -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 7: Mango Sorbet (Vegan) -->
             <article class="menu-card" 
                      data-title="Mango Sorbet (Vegan)" 
                      data-price="$4.80" 
                      data-img="images/mango_sorbet.jpg"
                      data-description="100% dairy-free, refreshingly sweet sorbet made from ripe Alphonso mangoes."
-<!-- Vegan ingredient details -->
                      data-ingredients="Alphonso Mango Puree, Filtered Water, Cane Sugar, Lime Juice.">
                 <img src="images/mango_sorbet.jpg" alt="Vegan Mango Sorbet" class="menu-image">
                 <div class="menu-details">
                     <h2>Mango Sorbet (Vegan)</h2>
                     <p class="price-tag">$4.80</p>
-<!-- Details button element -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
 
-<!-- Menu Card 8: Signature Waffle Sundae -->
             <article class="menu-card" 
                      data-title="Signature Waffle Sundae" 
                      data-price="$7.50" 
                      data-img="images/waffle_sundae.jpg"
                      data-description="Two scoops of your choice on a fresh warm waffle, topped with whip, nuts, and syrup."
-<!-- Waffle sundae ingredients data -->
                      data-ingredients="Fresh Baked Waffle (Flour, Eggs, Butter), Whipped Cream, Crushed Peanuts, Fudge Sauce.">
                 <img src="images/waffle_sundae.jpg" alt="Signature Waffle Sundae" class="menu-image">
                 <div class="menu-details">
                     <h2>Signature Waffle Sundae</h2>
                     <p class="price-tag">$7.50</p>
-<!-- Click trigger for sundae item card -->
                     <span class="view-details-btn">Click for Details</span>
                 </div>
             </article>
@@ -179,57 +148,48 @@
         </section>
     </main>
 
-<!-- Popup modal box structure -->
-    <!-- Information Pop-up Modal (Arush's Feedback) -->
+    <!-- Information Pop-up Modal -->
     <div class="modal-overlay" id="itemModal">
         <div class="modal-content">
             <span class="close-btn" id="closeModal">&times;</span>
-<!-- Image element updated dynamically by jQuery -->
             <img src="" alt="" class="modal-image" id="modalImg">
             <h2 id="modalTitle" style="color: var(--secondary-color); margin-bottom: 5px;"></h2>
             <p class="modal-price" id="modalPrice"></p>
             <p class="modal-description" id="modalDesc"></p>
-<!-- Box for displaying ingredients and allergens -->
             <div class="modal-ingredients">
                 <h3>Ingredients & Allergy Info</h3>
                 <p id="modalIngredients" style="margin-top: 5px; font-size: 0.9em;"></p>
             </div>
         </div>
     </div>
-<!-- Footer copyright container -->
     
     <!-- Fixed Footer -->
     <footer>
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
     </footer>
 
-<!-- jQuery library import for popup modal script -->
     <!-- Interactive Script for Modal Popups -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.menu-card').on('click', function(){
-<!-- Grabs card data attributes when clicked -->
                 const title = $(this).attr('data-title');
                 const price = $(this).attr('data-price');
                 const img = $(this).attr('data-img');
                 const desc = $(this).attr('data-description');
                 const ingredients = $(this).attr('data-ingredients');
 
-<!-- Populates text into the modal container -->
                 $('#modalTitle').text(title);
                 $('#modalPrice').text(price);
                 $('#modalImg').attr('src', img).attr('alt', title);
                 $('#modalDesc').text(desc);
                 $('#modalIngredients').text(ingredients);
 
-<!-- Shows modal by adding active class -->
                 $('#itemModal').addClass('active');
             });
 
             $('#closeModal, .modal-overlay').on('click', function(e){
                 if(e.target === this) {
-<!-- Hides modal when clicking X or background -->
                     $('#itemModal').removeClass('active');
                 }
             });
