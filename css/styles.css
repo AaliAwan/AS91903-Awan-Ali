@@ -335,12 +335,13 @@ nav a.active:hover {
     transform: translateY(-5px);
 }
 
-/* Ensures menu product images crop cleanly without stretching out of proportion. */
+/* Ensures menu product images crop cleanly and center accurately (Yeran's fix). */
 .menu-image {
     display: block;
     height: 180px;
-/* Clips images cleanly to fill full card container dimensions without scaling distortion. */
+/* Crops images cleanly to fill container while keeping subjects centered. */
     object-fit: cover;
+    object-position: center;
     width: 100%;
 }
 
