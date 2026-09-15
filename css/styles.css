@@ -104,12 +104,12 @@ body {
     margin-bottom: 15px;
 }
 
-/* Ensures content container expands to cover screen height between header and footer. */
+/* Ensures content container expands to cover screen height between header and footer. Increased top padding to separate content from top header bar (Arush's feedback). */
 .content-wrapper {
     min-height: calc(100vh - 120px);
 /* Adds padding offsets for fixed header navigation bar and bottom footer elements. */
     padding-bottom: 50px;
-    padding-top: 90px;
+    padding-top: 140px;
 }
 
 /* Removes top padding specifically on the home page hero screen so it sits flush at top. */
@@ -279,11 +279,11 @@ nav a.active:hover {
     border-color: var(--secondary-color);
 }
 
-/* Creates dark overlay block for general internal page content wrappers. */
+/* Creates dark overlay block for general internal page content wrappers. Generous top padding added to prevent page intro boxes from clipping under navigation header bar (Arush's feedback). */
 .page-content {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 0;
-    padding: 90px 5% 40px 5%;
+    padding: 140px 5% 40px 5%;
 }
 
 /* Adds top intro card styling for page titles and headers. */
@@ -704,7 +704,11 @@ figcaption {
 
     .content-wrapper {
 /* Increases top padding to offset larger stacked header navigation height. */
-        padding-top: 140px;
+        padding-top: 180px;
+    }
+
+    .page-content {
+        padding-top: 180px;
     }
 
     .menu-grid {
