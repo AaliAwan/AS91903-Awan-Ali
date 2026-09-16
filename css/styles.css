@@ -6,7 +6,7 @@
     --background-opacity: 0.7;
     --box-bg-color: rgba(0, 0, 50, var(--background-opacity));
     --primary-color: #002244;
-/* Defines cyan secondary color and general text/transition variables for cohesive design. */
+    /* Defines cyan secondary color and general text/transition variables for cohesive design. */
     --secondary-color: #10acc8;
     --text-color: #ffffff;
     --transition-speed: 0.3s;
@@ -25,7 +25,7 @@ body {
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
-/* Sets default fallback typography and ensures full window height for the body element. */
+    /* Sets default fallback typography and ensures full window height for the body element. */
     font-family: 'Montserrat', Arial, sans-serif;
     min-height: 100vh;
     text-align: center;
@@ -41,7 +41,7 @@ body {
 .story-box {
     background: var(--box-bg-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
-/* Rounds story container corners and sets space under the section block. */
+    /* Rounds story container corners and sets space under the section block. */
     border-radius: 12px;
     margin-bottom: 30px;
     padding: 30px;
@@ -63,7 +63,7 @@ body {
 .about-grid {
     display: grid;
     gap: 20px;
-/* Sets column template bounds allowing automated responsiveness without fixed media breakpoints. */
+    /* Sets column template bounds allowing automated responsiveness without fixed media breakpoints. */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-bottom: 35px;
 }
@@ -73,7 +73,7 @@ body {
     background: var(--box-bg-color);
     border-radius: 10px;
     border-top: 4px solid var(--secondary-color);
-/* Applies internal spacing inside structural feature cards. */
+    /* Applies internal spacing inside structural feature cards. */
     padding: 25px;
     text-align: center;
 }
@@ -93,7 +93,7 @@ body {
 /* Creates a highlighted card area at the bottom of the page to encourage user clicks. */
 .about-cta {
     background: var(--box-bg-color);
-/* Applies rounded outer corners to call-to-action wrapper blocks. */
+    /* Applies rounded outer corners to call-to-action wrapper blocks. */
     border-radius: 10px;
     padding: 25px;
     text-align: center;
@@ -104,10 +104,10 @@ body {
     margin-bottom: 15px;
 }
 
-/* Ensures content container expands to cover screen height between header and footer. Increased top padding to separate content from top header bar (Arush's feedback). */
+/* Ensures content container expands to cover screen height between header and footer with top padding to separate content from top header bar. */
 .content-wrapper {
     min-height: calc(100vh - 120px);
-/* Adds padding offsets for fixed header navigation bar and bottom footer elements. */
+    /* Adds padding offsets for fixed header navigation bar and bottom footer elements. */
     padding-bottom: 50px;
     padding-top: 140px;
 }
@@ -121,13 +121,13 @@ body {
 header {
     align-items: center;
     background: var(--box-bg-color);
-/* Adds drop shadow styling under the navigation bar to increase depth perception. */
+    /* Adds drop shadow styling under the navigation bar to increase depth perception. */
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
     left: 0;
     padding: 10px 30px;
-/* Locks header to screen view while enabling smooth transition for scroll states. */
+    /* Locks header to screen view while enabling smooth transition for scroll states. */
     position: fixed;
     right: 0;
     top: 0;
@@ -140,11 +140,11 @@ header.scrolled {
     background: rgba(0, 0, 50, 0.9);
 }
 
-/* Increased logo size so it stands out clearly in navigation bar (Yeran's fix). */
+/* Sets the logo size so it stands out clearly inside the navigation header bar. */
 .logo { 
     background: transparent;
     display: block;
-/* Size updated from 50px to 70px to make logo significantly clearer. */
+    /* Height value ensures logo displays cleanly. */
     height: 70px; 
     transition: transform var(--transition-speed);
     width: auto;
@@ -155,7 +155,7 @@ header.scrolled {
     transform: scale(1.05);
 }
 
-/* Spacing added between logo/header and navigation bar (Arush's feedback). */
+/* Adds spacing between the logo image and the navigation bar links. */
 nav {
     margin-left: 30px;
 }
@@ -165,7 +165,7 @@ nav a {
     border-radius: 5px;
     color: var(--text-color);
     margin-left: 20px;
-/* Sets internal navigation link padding and disables default text decoration underlines. */
+    /* Sets internal navigation link padding and disables default text decoration underlines. */
     padding: 5px 10px;
     text-decoration: none;
     transition: background var(--transition-speed), color var(--transition-speed);
@@ -180,7 +180,7 @@ nav a:hover {
 /* Highlights currently selected menu page link with solid secondary accent color. */
 nav a.active {
     background: var(--secondary-color);
-/* Sets bold weight for active navigation page indicator buttons. */
+    /* Sets bold weight for active navigation page indicator buttons. */
     font-weight: bold;
 }
 
@@ -198,7 +198,7 @@ nav a.active:hover {
 /* Darkens main ordering header button slightly when hovered over by a user. */
 .cta-link:hover {
     background: rgba(16, 172, 200, 0.9);
-/* Outlines CTA ordering button with light border highlight during cursor hover. */
+    /* Outlines CTA ordering button with light border highlight during cursor hover. */
     border-color: var(--text-color);
 }
 
@@ -207,7 +207,7 @@ nav a.active:hover {
     align-items: center;
     display: flex;
     height: 100vh;
-/* Centers elements horizontally inside hero display wrapper. */
+    /* Centers elements horizontally inside hero display wrapper. */
     justify-content: center;
 }
 
@@ -216,7 +216,7 @@ nav a.active:hover {
     background: var(--box-bg-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-/* Constrains hero display box width to prevent text overflow on ultra-wide screens. */
+    /* Constrains hero display box width to prevent text overflow on ultra-wide screens. */
     max-width: 80%;
     padding: 40px;
 }
@@ -230,7 +230,7 @@ nav a.active:hover {
 /* Styles subtitle text inside home page hero content box container. */
 .hero-box h2 {
     font-size: 1.2em;
-/* Adjusts font weight and bottom spacing for secondary hero subtitles. */
+    /* Adjusts font weight and bottom spacing for secondary hero subtitles. */
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -239,14 +239,14 @@ nav a.active:hover {
 .buttons a, .form-actions button {
     border: 2px solid var(--text-color);
     border-radius: 25px;
-/* Sets button typography and cursor interactions. */
+    /* Sets button typography and cursor interactions. */
     color: white;
     cursor: pointer;
     display: inline-block;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     margin: 10px;
-/* Configures button padding and transition timings. */
+    /* Configures button padding and transition timings. */
     padding: 12px 25px;
     text-decoration: none;
     transition: all var(--transition-speed);
@@ -261,7 +261,7 @@ nav a.active:hover {
 /* Adds bright glow effect when hovering over main action buttons. */
 .primary-button:hover {
     background: var(--text-color);
-/* Updates primary button colors on cursor hover. */
+    /* Updates primary button colors on cursor hover. */
     border-color: var(--text-color);
     box-shadow: 0 0 15px var(--secondary-color);
     color: var(--primary-color);
@@ -275,11 +275,11 @@ nav a.active:hover {
 /* Turns secondary button background into cyan when hovered over by cursor. */
 .secondary-button:hover {
     background: var(--secondary-color);
-/* Matches border outline color on secondary button hovers. */
+    /* Matches border outline color on secondary button hovers. */
     border-color: var(--secondary-color);
 }
 
-/* Creates dark overlay block for general internal page content wrappers. Generous top padding added to prevent page intro boxes from clipping under navigation header bar (Arush's feedback). */
+/* Creates a dark overlay container for main page content with top padding so title boxes sit nicely under navigation header bar. */
 .page-content {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 0;
@@ -289,7 +289,7 @@ nav a.active:hover {
 /* Adds top intro card styling for page titles and headers. */
 .page-intro {
     background: var(--box-bg-color);
-/* Configures border-radius for interior header title cards. */
+    /* Configures border-radius for interior header title cards. */
     border-radius: 10px;
     margin-bottom: 30px;
     padding: 20px;
@@ -304,18 +304,18 @@ nav a.active:hover {
 /* Highlights key callout banners with clear rounded text bar. */
 .highlight-bar {
     background: rgba(255, 255, 255, 0.1);
-/* Adds rounded corners to highlight bar callout containers. */
+    /* Adds rounded corners to highlight bar callout containers. */
     border-radius: 5px;
     font-weight: bold;
     margin-top: 15px;
     padding: 10px;
 }
 
-/* Arranges 8 ice creams into exactly 4 columns in a row on desktop (Tej's fix). */
+/* Creates a grid layout that displays menu items cleanly across 4 equal columns on desktop screens. */
 .menu-grid {
     display: grid;
     gap: 20px;
-/* Sets exactly 4 equal columns across menu section to split 8 items into two clean rows. */
+    /* Sets exactly 4 equal columns across menu section to split 8 items into two clean rows. */
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 30px;
 }
@@ -325,7 +325,7 @@ nav a.active:hover {
     background: var(--box-bg-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-/* Sets cursor pointer to show cards are clickable for information popups (Arush's feedback). */
+    /* Sets cursor to a pointer hand to show users that menu cards can be clicked for popups. */
     cursor: pointer;
     overflow: hidden;
     text-align: left;
@@ -335,16 +335,16 @@ nav a.active:hover {
 /* Lifts menu cards slightly upwards when hovered over by mouse. */
 .menu-card:hover {
     border-color: var(--secondary-color);
-/* Generates subtle drop shadow glow effect around menu card elements. */
+    /* Generates subtle drop shadow glow effect around menu card elements. */
     box-shadow: 0 8px 20px rgba(16, 172, 200, 0.3);
     transform: translateY(-5px);
 }
 
-/* Ensures menu product images crop cleanly and center accurately (Yeran's fix). */
+/* Fits and crops product photos neatly so they align inside menu cards without stretching. */
 .menu-image {
     display: block;
     height: 180px;
-/* Crops images cleanly to fill container while keeping subjects centered. */
+    /* Crops images cleanly to fill container while keeping subjects centered. */
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -358,7 +358,7 @@ nav a.active:hover {
 /* Applies theme colors to individual item titles within menu cards. */
 .menu-details h2 {
     color: var(--secondary-color);
-/* Sets heading typography sizes inside flavor cards. */
+    /* Sets heading typography sizes inside flavor cards. */
     font-size: 1.1em;
     margin-bottom: 5px;
 }
@@ -373,13 +373,13 @@ nav a.active:hover {
 .view-details-btn {
     background: rgba(16, 172, 200, 0.2);
     border: 1px solid var(--secondary-color);
-/* Sets pill shape rounded styling for detail view triggers. */
+    /* Sets pill shape rounded styling for detail view triggers. */
     border-radius: 15px;
     color: var(--text-color);
     display: inline-block;
     font-size: 0.8em;
     padding: 5px 12px;
-/* Adds transition timing for hover color fills. */
+    /* Adds transition timing for hover color fills. */
     transition: background var(--transition-speed);
 }
 
@@ -388,23 +388,23 @@ nav a.active:hover {
     background: var(--secondary-color);
 }
 
-/* Covers full viewport with dark screen overlay for interactive popup modals (Arush's fix). */
+/* Creates a full screen dark backdrop behind popup modal windows. */
 .modal-overlay {
     align-items: center;
     background: rgba(0, 0, 0, 0.85);
-/* Positions modal overlay to lock over entire active browser window view. */
+    /* Positions modal overlay to lock over entire active browser window view. */
     display: flex;
     height: 100vh;
     justify-content: center;
     left: 0;
     opacity: 0;
-/* Disables pointer interactions when modal hidden. */
+    /* Disables pointer interactions when modal hidden. */
     pointer-events: none;
     position: fixed;
     top: 0;
     transition: opacity var(--transition-speed) ease;
     width: 100vw;
-/* Ensures popups render above all header and content z-index levels. */
+    /* Ensures popups render above all header and content z-index levels. */
     z-index: 2000;
 }
 
@@ -414,24 +414,24 @@ nav a.active:hover {
     pointer-events: auto;
 }
 
-/* Formats popup window container with scrollable overflow and accent borders. Extra top padding for close icon visibility (Tej's fix). */
+/* Formats the popup box container with borders, top padding, and scrolling if text is long. */
 .modal-content {
     background: var(--primary-color);
     border: 2px solid var(--secondary-color);
     border-radius: 15px;
-/* Adds drop shadow to popups to separate detail boxes from dark backgrounds. */
+    /* Adds drop shadow to popups to separate detail boxes from dark backgrounds. */
     box-shadow: 0 0 25px rgba(16, 172, 200, 0.4);
     max-height: 85vh;
     max-width: 500px;
     overflow-y: auto;
     padding: 40px 25px 25px 25px;
-/* Sets layout positions and width thresholds for responsive mobile displays. */
+    /* Sets layout positions and width thresholds for responsive mobile displays. */
     position: relative;
     text-align: left;
     width: 90%;
 }
 
-/* Positions modal exit icon clearly with dark contrast background and distinct styling (Tej's fix). */
+/* Styles and positions the circular close button in the top corner of the popup window. */
 .close-btn {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
@@ -441,7 +441,7 @@ nav a.active:hover {
     cursor: pointer;
     display: flex;
     font-size: 1.5em;
-/* Configures close icon placement within popup cards to stay clear of content and image. */
+    /* Configures close icon placement within popup cards to stay clear of content and image. */
     font-weight: bold;
     height: 32px;
     justify-content: center;
@@ -460,11 +460,11 @@ nav a.active:hover {
     color: var(--primary-color);
 }
 
-/* Shapes preview image sizing inside active popups to fit header area with top space for close icon (Tej's fix). */
+/* Adjusts image sizing inside the popup modal box to fit neatly under the close button. */
 .modal-image {
     border-radius: 10px;
     height: 200px;
-/* Crops modal preview images to match container proportions cleanly with space under close button. */
+    /* Crops modal preview images to match container proportions cleanly with space under close button. */
     margin-bottom: 15px;
     margin-top: 10px;
     object-fit: cover;
@@ -488,7 +488,7 @@ nav a.active:hover {
 /* Creates shaded box inside modal popup to present ingredient lists clearly. */
 .modal-ingredients {
     background: rgba(255, 255, 255, 0.05);
-/* Rounds ingredient box container edges inside popup cards. */
+    /* Rounds ingredient box container edges inside popup cards. */
     border-radius: 8px;
     padding: 12px;
 }
@@ -497,7 +497,7 @@ nav a.active:hover {
 .modal-ingredients h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--secondary-color);
-/* Sets ingredient header text styling inside active modal windows. */
+    /* Sets ingredient header text styling inside active modal windows. */
     font-size: 0.95em;
     padding-bottom: 4px;
 }
@@ -516,7 +516,7 @@ nav a.active:hover {
 .steps-grid {
     display: grid;
     gap: 25px;
-/* Organizes instructional step boxes dynamically. */
+    /* Organizes instructional step boxes dynamically. */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
@@ -524,7 +524,7 @@ nav a.active:hover {
 .step-card {
     background: var(--box-bg-color);
     border-radius: 10px;
-/* Adds top accent colored line to step card headers. */
+    /* Adds top accent colored line to step card headers. */
     border-top: 5px solid var(--secondary-color);
     padding: 25px;
     padding-top: 40px;
@@ -536,13 +536,13 @@ nav a.active:hover {
 .step-number {
     background: var(--secondary-color);
     border-radius: 50%;
-/* Centers numeric step labels inside floating circular badges. */
+    /* Centers numeric step labels inside floating circular badges. */
     font-size: 1.1em;
     font-weight: bold;
     height: 30px;
     left: 50%;
     line-height: 30px;
-/* Absolute positions numbered badges above card borders. */
+    /* Absolute positions numbered badges above card borders. */
     position: absolute;
     top: -15px;
     transform: translateX(-50%);
@@ -559,7 +559,7 @@ nav a.active:hover {
 /* Clears list formatting for information items shown on ordering section. */
 .order-info {
     list-style-type: none;
-/* Removes default indents from custom list items. */
+    /* Removes default indents from custom list items. */
     margin-top: 10px;
     padding: 0;
     text-align: left;
@@ -569,7 +569,7 @@ nav a.active:hover {
 .order-info li::before {
     content: "•";
     color: var(--secondary-color);
-/* Styles list bullet character spacing and weight. */
+    /* Styles list bullet character spacing and weight. */
     display: inline-block;
     font-weight: bold;
     margin-left: -1em;
@@ -580,7 +580,7 @@ nav a.active:hover {
 .contact-link {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-/* Sets hyperlink button colors. */
+    /* Sets hyperlink button colors. */
     color: var(--secondary-color);
     display: inline-block;
     font-weight: bold;
@@ -597,7 +597,7 @@ nav a.active:hover {
 /* Creates highlighted banner section for privacy notes on forms. */
 .privacy-note {
     background: rgba(16, 172, 200, 0.2);
-/* Applies inner padding to privacy callout boxes. */
+    /* Applies inner padding to privacy callout boxes. */
     border-radius: 8px;
     margin-top: 30px;
     padding: 15px;
@@ -607,7 +607,7 @@ nav a.active:hover {
 .photo-grid {
     display: grid;
     gap: 15px;
-/* Sets minimum widths for gallery columns. */
+    /* Sets minimum widths for gallery columns. */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -615,7 +615,7 @@ nav a.active:hover {
 .gallery-item {
     background: var(--box-bg-color);
     border-radius: 8px;
-/* Configures shadows and scaling transitions on photo gallery containers. */
+    /* Configures shadows and scaling transitions on photo gallery containers. */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin: 0;
     overflow: hidden;
@@ -631,7 +631,7 @@ nav a.active:hover {
 .gallery-image {
     display: block;
     height: 250px;
-/* Crops static gallery images cleanly to fit bounds. */
+    /* Crops static gallery images cleanly to fit bounds. */
     object-fit: cover;
     width: 100%;
 }
@@ -640,7 +640,7 @@ nav a.active:hover {
 figcaption {
     background: rgba(0, 0, 0, 0.5);
     font-size: 0.9em;
-/* Styles caption text alignment and spacing. */
+    /* Styles caption text alignment and spacing. */
     font-style: italic;
     padding: 10px;
 }
@@ -649,21 +649,21 @@ figcaption {
 .form-container {
     background: var(--box-bg-color);
     border: 2px solid var(--secondary-color);
-/* Adds elevated box shadow to separate embedded form frame from background. */
+    /* Adds elevated box shadow to separate embedded form frame from background. */
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     margin: 0 auto 30px auto;
     max-width: 900px;
-/* Centers form frame content inside container view. */
+    /* Centers form frame content inside container view. */
     padding: 20px;
     text-align: center;
 }
 
-/* Ensures embedded Google Form iframe renders properly (Dominic's fix). */
+/* Displays the embedded online form with a white background and full width. */
 .order-form-iframe {
     background: #ffffff;
     border: none;
-/* Sets expanded height and 100% width on iframe to resolve blank screen loading issues. */
+    /* Sets expanded height and 100% width on iframe to resolve blank screen loading issues. */
     border-radius: 8px;
     height: 800px;
     max-width: 100%;
@@ -673,7 +673,7 @@ figcaption {
 /* Responsive breakpoint adjustments for smaller screens and tablets. */
 @media screen and (max-width: 1024px) {
     .menu-grid {
-/* Switches 4-column layout to 2 columns on tablet display sizes. */
+        /* Switches 4-column layout to 2 columns on tablet display sizes. */
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -682,7 +682,7 @@ figcaption {
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
-/* Adjusts top header padding for mobile layout viewports. */
+        /* Adjusts top header padding for mobile layout viewports. */
         padding: 15px;
     }
     
@@ -696,14 +696,14 @@ figcaption {
     }
     
     nav a {
-/* Shrinks text sizing on mobile navigation links. */
+        /* Shrinks text sizing on mobile navigation links. */
         font-size: 0.85em;
         margin: 0 5px;
         padding: 4px 8px;
     }
 
     .content-wrapper {
-/* Increases top padding to offset larger stacked header navigation height. */
+        /* Increases top padding to offset larger stacked header navigation height. */
         padding-top: 180px;
     }
 
@@ -712,7 +712,7 @@ figcaption {
     }
 
     .menu-grid {
-/* Converts menu layout into a single vertical column on mobile devices. */
+        /* Converts menu layout into a single vertical column on mobile devices. */
         grid-template-columns: 1fr;
     }
 
@@ -721,7 +721,7 @@ figcaption {
     }
 
     .order-form-iframe {
-/* Reduces embedded iframe height on small phone screens to fit viewports better. */
+        /* Reduces embedded iframe height on small phone screens to fit viewports better. */
         height: 650px;
     }
 
@@ -734,12 +734,12 @@ figcaption {
 footer {
     background: var(--box-bg-color);
     bottom: 0;
-/* Sets footer font sizing and placement overlay constraints. */
+    /* Sets footer font sizing and placement overlay constraints. */
     font-size: 14px;
     left: 0;
     padding: 10px;
     position: fixed;
-/* Locks footer to absolute viewport bottom layer. */
+    /* Locks footer to absolute viewport bottom layer. */
     right: 0;
     z-index: 1000;
 }

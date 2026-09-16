@@ -1,55 +1,57 @@
+<!-- Tells browser to render document using standard HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
-<!-- Links to stylesheet and normalize.css -->
 <head>
-    <!-- Sets character encoding to standard UTF-8 -->
+    <!-- Standard text character encoding -->
     <meta charset="UTF-8">
-    <!-- Helps the website scale on mobile screens -->
+    <!-- Ensures proper mobile viewport scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoops - Menu</title>
-    <!-- Loads font from Google Fonts -->
+    <!-- Imports Google Font typography style -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Normalize CSS for cross-browser consistency -->
     <link rel="stylesheet" href="css/normalise.css">
-    <!-- Loads main CSS styling file -->
+    <!-- Main custom styling rules -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Fixed header navigation section -->
+    <!-- Top header navigation area -->
     <header>
-        <!-- Logo image that links to homepage -->
+        <!-- Clickable logo image link -->
         <a href="index.html">
             <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
         </a>
-        <!-- Main navigation links for the website -->
+        <!-- Main menu bar links -->
         <nav>
             <a href="index.html" class="nav-link">Home</a>
-            <!-- Highlights current page link -->
+            <!-- Sets active class on current page link -->
             <a href="menu.html" class="nav-link active">Menu</a>
             <a href="about.html" class="nav-link">About Us</a>
             <a href="ordering.html" class="nav-link cta-link"><strong>Order Now</strong></a>
         </nav>
     </header>
 
-    <!-- Menu Content Wrapper -->
+    <!-- Content wrapper holding menu content -->
     <main class="content-wrapper page-content menu-page">
-        <!-- Intro heading section for menu -->
+        <!-- Title and introductory text section for menu -->
         <section class="page-intro">
             <h1>Scoops Ice Cream Menu</h1>
             <p>Explore our delicious range of handcrafted artisan flavors made fresh daily with local ingredients. Click on any item for full ingredients and flavor details!</p>
         </section>
 
-        <!-- Ice Cream Interactive Grid -->
+        <!-- Grid wrapper arranging menu items into columns -->
         <div class="menu-grid">
             
-            <!-- Vanilla Bean item card storing details in data attributes -->
+            <!-- Individual card item storing product details inside custom data attributes -->
             <article class="menu-card" 
                      data-title="Classic Vanilla Bean" 
                      data-price="$4.50" 
                      data-img="images/vanilla_bean.jpg"
                      data-description="Made with real Madagascan vanilla pods and fresh organic cream. A timeless, rich classic."
                      data-ingredients="Fresh Cream, Organic Milk, Cane Sugar, Egg Yolks, Pure Vanilla Bean Paste.">
-                <!-- Main image for Vanilla card -->
+                <!-- Flavor product image display -->
                 <img src="images/vanilla_bean.jpg" alt="Classic Vanilla Bean Ice Cream" class="menu-image">
+                <!-- Text detail container inside card -->
                 <div class="menu-details">
                     <h2>Classic Vanilla Bean</h2>
                     <p class="price-tag">$4.50</p>
@@ -57,14 +59,13 @@
                 </div>
             </article>
 
-            <!-- Chocolate Fudge item card -->
+            <!-- Chocolate Fudge menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Rich Chocolate Fudge" 
                      data-price="$5.00" 
                      data-img="images/chocolate_fudge.jpg"
                      data-description="Deep Belgian dark chocolate ice cream swirled with homemade gooey chocolate fudge sauce."
                      data-ingredients="Whole Milk, Cocoa Butter, Dark Belgian Chocolate, Fudge Swirl, Sugar, Cream.">
-                <!-- Main image for Chocolate card -->
                 <img src="images/chocolate_fudge.jpg" alt="Rich Chocolate Fudge Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Rich Chocolate Fudge</h2>
@@ -73,14 +74,13 @@
                 </div>
             </article>
 
-            <!-- Strawberry item card -->
+            <!-- Strawberry menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Fresh Strawberry" 
                      data-price="$4.50" 
                      data-img="images/fresh_strawberry.jpg"
                      data-description="Churned with real, locally harvested strawberries for a bright, fruity, and refreshing scoop."
                      data-ingredients="Local Strawberries, Fresh Cream, Condensed Milk, Sugar, Lemon Juice.">
-                <!-- Main image for Strawberry card -->
                 <img src="images/fresh_strawberry.jpg" alt="Fresh Strawberry Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Fresh Strawberry</h2>
@@ -89,14 +89,13 @@
                 </div>
             </article>
 
-            <!-- Mint Chip item card -->
+            <!-- Mint Chip menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Mint Chocolate Chip" 
                      data-price="$5.00" 
                      data-img="images/mint_chip.jpg"
                      data-description="Cool peppermint ice cream packed with crunchy dark chocolate flakes."
                      data-ingredients="Natural Peppermint Extract, Dark Chocolate Chunks, Fresh Cream, Milk, Sugar.">
-                <!-- Main image for Mint card -->
                 <img src="images/mint_chip.jpg" alt="Mint Chocolate Chip Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Mint Chocolate Chip</h2>
@@ -105,14 +104,13 @@
                 </div>
             </article>
 
-            <!-- Cookies & Cream item card -->
+            <!-- Cookies & Cream menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Cookies & Cream" 
                      data-price="$5.20" 
                      data-img="images/cookies_cream.jpg"
                      data-description="Smooth sweet cream base loaded with crushed chocolate sandwich cookie chunks."
                      data-ingredients="Chocolate Sandwich Cookies, Fresh Cream, Whole Milk, Sugar, Natural Vanilla.">
-                <!-- Main image for Cookies card -->
                 <img src="images/cookies_cream.jpg" alt="Cookies & Cream Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Cookies & Cream</h2>
@@ -121,14 +119,13 @@
                 </div>
             </article>
 
-            <!-- Salted Caramel item card -->
+            <!-- Salted Caramel menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Salted Caramel Swirl" 
                      data-price="$5.20" 
                      data-img="images/salted_caramel.jpg"
                      data-description="Rich butter caramel infused with sea salt, folded through a creamy base."
                      data-ingredients="Sea Salt, Brown Sugar, Butter, Heavy Cream, Milk, Vanilla Extract.">
-                <!-- Main image for Caramel card -->
                 <img src="images/salted_caramel.jpg" alt="Salted Caramel Swirl Ice Cream" class="menu-image">
                 <div class="menu-details">
                     <h2>Salted Caramel Swirl</h2>
@@ -137,14 +134,13 @@
                 </div>
             </article>
 
-            <!-- Vegan Mango Sorbet item card -->
+            <!-- Vegan Mango Sorbet menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Mango Sorbet (Vegan)" 
                      data-price="$4.80" 
                      data-img="images/mango_sorbet.jpg"
                      data-description="100% dairy-free, refreshingly sweet sorbet made from ripe Alphonso mangoes."
                      data-ingredients="Alphonso Mango Puree, Filtered Water, Cane Sugar, Lime Juice.">
-                <!-- Main image for Mango card -->
                 <img src="images/mango_sorbet.jpg" alt="Vegan Mango Sorbet" class="menu-image">
                 <div class="menu-details">
                     <h2>Mango Sorbet (Vegan)</h2>
@@ -153,14 +149,13 @@
                 </div>
             </article>
 
-            <!-- Waffle Sundae item card -->
+            <!-- Signature Waffle Sundae menu item card with data attributes -->
             <article class="menu-card" 
                      data-title="Signature Waffle Sundae" 
                      data-price="$7.50" 
                      data-img="images/waffle_sundae.jpg"
                      data-description="Two scoops of your choice on a fresh warm waffle, topped with whip, nuts, and syrup."
                      data-ingredients="Fresh Baked Waffle (Flour, Eggs, Butter), Whipped Cream, Crushed Peanuts, Fudge Sauce.">
-                <!-- Main image for Waffle card -->
                 <img src="images/waffle_sundae.jpg" alt="Signature Waffle Sundae" class="menu-image">
                 <div class="menu-details">
                     <h2>Signature Waffle Sundae</h2>
@@ -172,16 +167,20 @@
         </div>
     </main>
 
-    <!-- Information Pop-up Modal -->
+    <!-- Hidden popup window overlay that shows flavor information when clicked -->
     <div class="modal-overlay" id="itemModal">
+        <!-- Inner box container for popup details -->
         <div class="modal-content">
-            <!-- Close button for pop-up box -->
+            <!-- Close button symbol to hide popup window -->
             <span class="close-btn" id="closeModal">&times;</span>
+            <!-- Image placeholder filled dynamically by JavaScript -->
             <img src="images/placeholder.jpg" alt="Ice cream detail preview" class="modal-image" id="modalImg">
+            <!-- Popup title heading filled dynamically -->
             <h2 id="modalTitle" style="color: var(--secondary-color); margin-bottom: 5px;">Item Details</h2>
-            <!-- Empty tags filled in using JavaScript below -->
+            <!-- Empty paragraph elements dynamically populated with card data -->
             <p class="modal-price" id="modalPrice"></p>
             <p class="modal-description" id="modalDesc"></p>
+            <!-- Ingredients area inside popup -->
             <div class="modal-ingredients">
                 <h3>Ingredients & Allergy Info</h3>
                 <p id="modalIngredients" style="margin-top: 5px; font-size: 0.9em;"></p>
@@ -189,37 +188,39 @@
         </div>
     </div>
     
-    <!-- Fixed Footer section -->
+    <!-- Footer bar -->
     <footer>
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
     </footer>
 
-    <!-- Loads jQuery library for modal script -->
+    <!-- Loads jQuery library for interactive script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        // Runs script code once web page finishes loading
         $(document).ready(function(){
-            // Runs code when a menu card is clicked
+            // Triggers event when user clicks any menu item card
             $('.menu-card').on('click', function(){
-                // Gets values from card data attributes
+                // Extracts details stored in custom attributes on clicked card
                 const title = $(this).attr('data-title');
                 const price = $(this).attr('data-price');
                 const img = $(this).attr('data-img');
                 const desc = $(this).attr('data-description');
                 const ingredients = $(this).attr('data-ingredients');
 
-                // Puts the data into the modal pop-up
+                // Replaces text inside popup window with details from clicked card
                 $('#modalTitle').text(title);
                 $('#modalPrice').text(price);
                 $('#modalImg').attr('src', img).attr('alt', title);
                 $('#modalDesc').text(desc);
                 $('#modalIngredients').text(ingredients);
 
-                // Shows the pop-up window
+                // Displays popup modal window on screen
                 $('#itemModal').addClass('active');
             });
 
-            // Closes modal when user clicks close button or backdrop
+            // Closes popup window when close button or background overlay is clicked
             $('#closeModal, .modal-overlay').on('click', function(e){
+                // Ensures popup only closes if click is on dark background or close button
                 if(e.target === this) {
                     $('#itemModal').removeClass('active');
                 }

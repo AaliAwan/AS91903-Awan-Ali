@@ -1,83 +1,98 @@
+<!-- Tells the web browser that this document is written in modern HTML5 -->
 <!DOCTYPE html>
-<!-- Sets up the main language as English for the browser -->
+<!-- Sets the language of the web page to English -->
 <html lang="en">
 <head>
+    <!-- Sets character encoding so letters and special characters display correctly -->
     <meta charset="UTF-8">
-<!-- Makes sure the website fits nicely on mobile screens -->
+    <!-- Makes sure the web page automatically resizes to fit mobile screens properly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the page title displayed on the browser tab -->
     <title>Scoops - About Us</title>
+    <!-- Imports the clean Montserrat font style from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!-- Connects the normalize file so styles look the same across browsers -->
+    <!-- Links a normalize CSS stylesheet so the website looks identical across different web browsers -->
     <link rel="stylesheet" href="css/normalise.css">
+    <!-- Links the main custom stylesheet that controls all colors, spacing, and layouts -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<!-- Top navigation header for site links -->
+    <!-- Top navigation area that stays at the top of the page -->
     <header>
+        <!-- Makes the brand logo clickable so users can click it to go back to the home page -->
         <a href="index.html">
+            <!-- Displays the logo image file -->
             <img src="images/logo.png" alt="Scoops Logo" class="logo">
         </a>
-<!-- Main navigation menu links -->
+        <!-- Navigation bar holding links to all main pages on the site -->
         <nav>
+            <!-- Link to the homepage -->
             <a href="index.html" class="nav-link">Home</a>
+            <!-- Link to the menu page -->
             <a href="menu.html" class="nav-link">Menu</a>
+            <!-- Link to the about page, highlighted to show it is the current page -->
             <a href="about.html" class="nav-link active">About Us</a>
-<!-- Call-to-action button for the ordering page -->
+            <!-- Call to action button linking directly to the order page -->
             <a href="ordering.html" class="nav-link cta-link"><strong>Order Now</strong></a>
         </nav>
     </header>
 
-<!-- Main content section for the About page -->
+    <!-- Main wrapper holding all content for the About page -->
     <main class="content-wrapper page-content">
-        <!-- Section Header -->
+        <!-- Top title section introducing the page -->
         <section class="page-intro">
+            <!-- Main heading title for the About Us page -->
             <h1>About Scoops Ice Cream</h1>
-<!-- Brief intro line about the brand -->
+            <!-- Short introductory sentence summarizing the business -->
             <p>Handcrafted artisan ice cream churned daily with fresh, locally sourced ingredients.</p>
         </section>
 
-        <!-- Main Story Container -->
-<!-- Box holding the company history text -->
+        <!-- Main container grouping the company story and feature blocks -->
         <section class="about-container">
+            <!-- Card box holding the main story text -->
             <article class="story-box">
+                <!-- Subheading for the story section -->
                 <h2>Our Story</h2>
-                <p>Founded in 2026, Scoops was born from an unwavering obsession to elevate the traditional ice cream parlor into an extraordinary sensory experience. In an era dominated by mass production and artificial shortcuts, we returned to first principles: alchemy begins with integrity. We believe that true dessert is not merely sweet, but an art form defined by master craftsmanship, uncompromising purity, and emotional resonance. Every morning, our kitchen transforms into a culinary workshop where rich, grass-fed organic dairy from local pastures meets hand-harvested, ethically sourced botanicals and real fruit. We churn in meticulously small batches to preserve microscopic air-cell structure, creating a velvety density and an exceptionally smooth melt point that unleashes deep, complex layers of flavor across your palate. From the warm, aromatic depth of hand-scraped Madagascan vanilla pods to the intense single-origin dark Belgian chocolate, each scoop is engineered to evoke pure nostalgia while inspiring sophisticated culinary delight. When you step up to our counter, you aren’t simply buying a frozen treat you are partaking in a passionate ritual of taste, tradition, and indulgence crafted specifically to make your day unforgettable.</p>
+                <!-- Paragraph text explaining the background and values of the business -->
+                <p>Founded in 2026, Scoops was born from an unwavering obsession to elevate the traditional ice cream parlor into an extraordinary sensory experience. In an era dominated by mass production and artificial shortcuts, we returned to first principles: alchemy begins with integrity. We believe that true dessert is not merely sweet, but an art form defined by master craftsmanship, uncompromising purity, and emotional resonance. Every morning, our kitchen transforms into a culinary workshop where rich, grass-fed organic dairy from local pastures meets hand-harvested, ethically sourced botanicals and real fruit. We churn in meticulously small batches to preserve microscopic air-cell structure, creating a velvety density and an exceptionally smooth melt point that unleashes deep, complex layers of flavor across your palate. From the warm, aromatic depth of hand-scraped Madagascan vanilla pods to the intense single-origin dark Belgian chocolate, each scoop is engineered to evoke pure nostalgia while inspiring sophisticated culinary delight. When you step up to our counter, you aren't simply buying a frozen treat you are partaking in a passionate ritual of taste, tradition, and indulgence crafted specifically to make your day unforgettable.</p>
             </article>
-<!-- Grid containing key business highlights -->
 
-            <!-- Feature Cards Grid -->
+            <!-- Grid structure arranging feature cards side-by-side -->
             <div class="about-grid">
+                <!-- First feature card displaying business highlight 1 -->
                 <article class="about-card">
-                    <h3>🌾 100% Local</h3>
-<!-- First highlight feature card -->
+                    <h3>📍 100% Local</h3>
+                    <!-- Paragraph text explaining local ingredient sourcing -->
                     <p>We source our dairy and fruit directly from regional farms to support local producers and guarantee freshness.</p>
                 </article>
+                <!-- Second feature card displaying business highlight 2 -->
                 <article class="about-card">
                     <h3>🍨 Churned Daily</h3>
-<!-- Second highlight feature card -->
+                    <!-- Paragraph text explaining daily production -->
                     <p>Every single flavor on our menu is small-batch churned right in our kitchen every morning.</p>
                 </article>
+                <!-- Third feature card displaying business highlight 3 -->
                 <article class="about-card">
                     <h3>🌱 Inclusive Flavors</h3>
-<!-- Third highlight feature card -->
+                    <!-- Paragraph text explaining dietary options -->
                     <p>We believe everyone deserves a treat, offering dedicated vegan, dairy-free, and gluten-free options.</p>
                 </article>
             </div>
 
-<!-- Bottom call to action box directing users to menu -->
-            <!-- Call to Action Section -->
+            <!-- Call to action card prompting visitors to check the menu -->
             <div class="about-cta">
+                <!-- Heading question encouraging user action -->
                 <h3>Ready to try our handcrafted flavors?</h3>
+                <!-- Button link directing users to the menu page -->
                 <a href="menu.html" class="primary-button">View Our Full Menu</a>
             </div>
         </section>
-<!-- Closes out the main page content wrapper -->
     </main>
 
-    <!-- Fixed Footer -->
+    <!-- Footer bar positioned at the bottom of the window -->
     <footer>
+        <!-- Copyright text notice -->
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
-<!-- End of footer area -->
     </footer>
 </body>
 </html>

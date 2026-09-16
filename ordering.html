@@ -1,45 +1,49 @@
+<!-- Declares document format as modern HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Sets document encoding to standard UTF-8 -->
+    <!-- Sets character encoding format -->
     <meta charset="UTF-8">
+    <!-- Configures responsive viewport scaling for phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets text for browser tab heading -->
     <title>Scoops - Order Now</title>
+    <!-- Imports Google Montserrat font style -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!-- Connects main CSS files for header and form layout -->
+    <!-- Links normalize CSS file for cross-browser resetting -->
     <link rel="stylesheet" href="css/normalise.css">
+    <!-- Links main design stylesheet file -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<!-- Fixed header with branding logo -->
-    <!-- Header -->
+    <!-- Top navigation header bar -->
     <header>
+        <!-- Logo image linking back to main homepage -->
         <a href="index.html">
             <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
         </a>
-<!-- Navigation links bar -->
+        <!-- Main site navigation bar -->
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="menu.html" class="nav-link">Menu</a>
             <a href="about.html" class="nav-link">About Us</a>
-<!-- Active page highlight on Order Now button -->
+            <!-- Highlighted button showing user is on the Order page -->
             <a href="ordering.html" class="nav-link cta-link active"><strong>Order Now</strong></a>
         </nav>
     </header>
 
-<!-- Main content container for form -->
-    <!-- Content Wrapper -->
+    <!-- Main content container wrapper -->
     <main class="content-wrapper page-content">
+        <!-- Introductory section introducing the order form -->
         <section class="page-intro">
             <h1>Place Your Pre-Order</h1>
+            <!-- Brief instructions for placing an order -->
             <p>Fill out the form below to order your favorite scoops ahead of time for quick pickup!</p>
         </section>
 
-<!-- Google Form iframe section -->
-        <!-- Working Google Form Integration Container -->
+        <!-- Container holding embedded order form iframe -->
         <div class="form-container">
-            
-<!-- Google Form embedded iframe element -->
+            <!-- Embedded Google Form enabling online orders directly on page -->
             <iframe 
                 class="order-form-iframe" 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSd9J_cWhPaxwx_7fkIIdA12OPotG8VhWTEPFnmxAYjwvd2SbA/viewform?usp=sharing&ouid=104574283806547203579" 
@@ -49,7 +53,7 @@
         </div>
     </main>
 
-    <!-- Footer for the website -->
+    <!-- Bottom footer area -->
     <footer>
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
     </footer>

@@ -1,68 +1,81 @@
+<!-- Tells the web browser that this file uses standard HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
-<!-- Links to stylesheet and normalize.css -->
+<!-- Head section containing metadata, title, and external stylesheets -->
 <head>
-<!-- Sets character encoding for the page -->
+    <!-- Sets character set so all text renders clearly -->
     <meta charset="UTF-8">
+    <!-- Configures viewport scaling so the layout fits mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets text shown on browser tab -->
     <title>Scoops - Fresh Artisan Ice Cream</title>
+    <!-- Imports custom typography from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!-- Loads core project stylesheet files -->
+    <!-- Loads CSS resets to ensure consistent look across all browsers -->
     <link rel="stylesheet" href="css/normalise.css">
+    <!-- Loads core stylesheet for custom design and positioning -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<!-- Fixed header with logo and links -->
-    <!-- Navigation Header -->
+    <!-- Top header navigation bar -->
     <header>
+        <!-- Clickable image link taking user back to home page -->
         <a href="index.html">
             <img src="images/logo.png" alt="Scoops Ice Cream Logo" class="logo">
-<!-- Navigation bar pointing to all main pages -->
         </a>
+        <!-- Main site menu navigation links -->
         <nav>
+            <!-- Highlighted active button showing current page -->
             <a href="index.html" class="nav-link active">Home</a>
+            <!-- Link to menu page -->
             <a href="menu.html" class="nav-link">Menu</a>
-<!-- Highlighted current page link -->
+            <!-- Link to about us page -->
             <a href="about.html" class="nav-link">About Us</a>
+            <!-- Highlighted button linking to ordering form -->
             <a href="ordering.html" class="nav-link cta-link"><strong>Order Now</strong></a>
         </nav>
     </header>
 
-<!-- Main homepage hero banner section -->
-    <!-- Main Hero Content -->
+    <!-- Main hero section wrapper for home page banner -->
     <main class="content-wrapper home-page">
+        <!-- Hero section displaying main background banner -->
         <section class="hero">
+            <!-- Central content box containing main welcome text -->
             <div class="hero-box">
-<!-- Main heading title for the homepage -->
+                <!-- Large main title catchphrase -->
                 <h1>Taste the Happiness at Scoops!</h1>
+                <!-- Subheading slogan explaining the product -->
                 <h2>Handcrafted artisan ice cream made daily with fresh, local ingredients.</h2>
+                <!-- Container holding quick action navigation buttons -->
                 <div class="buttons">
+                    <!-- Button linking directly to menu page -->
                     <a href="menu.html" class="primary-button">View Menu</a>
-<!-- Action buttons linking to menu and ordering -->
+                    <!-- Button linking directly to online ordering form -->
                     <a href="ordering.html" class="primary-button">Place an Order</a>
                 </div>
             </div>
         </section>
     </main>
-<!-- Closes off the hero section wrapper -->
     
-    <!-- Footer -->
+    <!-- Footer bar with copyright text -->
     <footer>
         <p>© Scoops Ice Cream Parlour 2026 - All Rights Reserved.</p>
     </footer>
 
-    <!-- Header Scroll Script -->
-    <!-- Loads Google jQuery library for interactive script -->
+    <!-- Loads jQuery helper library from Google servers to support interactivity -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Script that changes header background color when page is scrolled down -->
     <script>
+        // Listens for window scroll movement
         $(window).scroll(function() {
-            // Checks if user scrolled down more than 50px
+            // Checks if user has scrolled down more than 50 pixels
             if ($(document).scrollTop() > 50) {
+                // Adds a darker background style to header when scrolled down
                 $('header').addClass('scrolled');
             } else {
+                // Returns header background to default transparency when at top
                 $('header').removeClass('scrolled');
             }
-            // Toggles header background style on scroll
         });
     </script>
 </body>
